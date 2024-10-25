@@ -22,6 +22,9 @@ import java.io.ByteArrayInputStream;
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 
 public class BZip2 {
+    /*
+     * Multi line comment
+     */
     public static byte[] decompress(byte data[], int offset, int length, int uncompressedLength) {
         byte uncompressedData[] = new byte[uncompressedLength];
         try {
@@ -29,7 +32,10 @@ public class BZip2 {
                     new ByteArrayInputStream(data, 2, length + 4));
             in.read(uncompressedData);
             in.close();
+            logger.info("Info message");
+            log.error("Error message");
         } catch (Exception e) {
+            // single line comment
             return null;
         }
         return uncompressedData;
