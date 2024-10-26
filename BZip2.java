@@ -33,9 +33,9 @@ public class BZip2 {
             in.read(uncompressedData);
             in.close();
             logger.info("Info message");
-            log.error("Error message");
         } catch (Exception e) {
             // single line comment
+            log.error("Error message");
             return null;
         }
         return uncompressedData;

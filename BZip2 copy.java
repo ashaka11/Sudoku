@@ -32,10 +32,10 @@ public class BZip2 {
                     new ByteArrayInputStream(data, 2, length + 4));
             in.read(uncompressedData);
             in.close();
-            logger.info("Info message");
-            log.error("Error message");
+            this.logger.trace("trace message");
         } catch (Exception e) {
             // single line comment
+            getLogger.fatal("Fatal message");
             return null;
         }
         return uncompressedData;
